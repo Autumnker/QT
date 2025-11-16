@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>888</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,2">
+      <item>
+       <widget class="QWidget" name="widget_view" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout" stretch="12,1,1,3">
+         <item>
+          <widget class="QWidget" name="widget_GraphView" native="true">
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="0" column="0">
+             <widget class="QGraphicsView" name="GView_cameraView">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>620</width>
+                <height>480</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_connection" native="true">
+           <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="3,6,1,16">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>连接信息</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="Combox_connection_status"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_connection_status">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="lineWidth">
+               <number>0</number>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_rota_parameters" native="true">
+           <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,2,1,2,2">
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>X舵机转角</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="LEdit_x_rota_angle"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>Y舵机转角</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="LEdit_y_rota_angle"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="Label_time_consuming">
+              <property name="text">
+               <string>识别耗时:0 (ms)</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_control_btn" native="true">
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="1" column="0" colspan="3">
+             <widget class="QPushButton" name="Btn_tracking">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>开启跟踪</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QPushButton" name="Btn_rotation_angle">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>发送旋转角度</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QComboBox" name="Combox_select_recognition">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="currentText">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QPushButton" name="Btn_Debug">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>调试模式</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget_color" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout_2" stretch="12,1">
+         <item>
+          <widget class="QWidget" name="widget_slider_spinBox" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QWidget" name="widget_red_slider_spinBox" native="true">
+              <layout class="QGridLayout" name="gridLayout_4">
+               <item row="1" column="3">
+                <widget class="QLabel" name="label_7">
+                 <property name="text">
+                  <string>H-max</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_6">
+                 <property name="text">
+                  <string>H-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="3">
+                <widget class="QLabel" name="label_10">
+                 <property name="text">
+                  <string>V-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="5">
+                <widget class="QSpinBox" name="Red_S_max_spinBox"/>
+               </item>
+               <item row="1" column="1">
+                <widget class="QSlider" name="Red_H_min_Slider">
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="2">
+                <widget class="QSpinBox" name="Red_V_min_spinBox"/>
+               </item>
+               <item row="4" column="2">
+                <widget class="QSpinBox" name="Red_S_min_spinBox"/>
+               </item>
+               <item row="9" column="1">
+                <widget class="QSlider" name="Red_V_min_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_8">
+                 <property name="text">
+                  <string>S-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="4">
+                <widget class="QSlider" name="Red_V_max_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="4">
+                <widget class="QSlider" name="Red_S_max_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="0">
+                <widget class="QLabel" name="label_11">
+                 <property name="text">
+                  <string>V-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="5">
+                <widget class="QSpinBox" name="Red_V_max_spinBox"/>
+               </item>
+               <item row="1" column="4">
+                <widget class="QSlider" name="Red_H_max_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QSpinBox" name="Red_H_min_spinBox"/>
+               </item>
+               <item row="0" column="0" colspan="3">
+                <widget class="QLabel" name="label_5">
+                 <property name="text">
+                  <string>红色</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QSlider" name="Red_S_min_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="3">
+                <widget class="QLabel" name="label_9">
+                 <property name="text">
+                  <string>S-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="5">
+                <widget class="QSpinBox" name="Red_H_max_spinBox"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="widget_green_slider_spinBox" native="true">
+              <layout class="QGridLayout" name="gridLayout_15">
+               <item row="1" column="3">
+                <widget class="QLabel" name="label_82">
+                 <property name="text">
+                  <string>H-max</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_83">
+                 <property name="text">
+                  <string>H-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="3">
+                <widget class="QLabel" name="label_84">
+                 <property name="text">
+                  <string>V-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="5">
+                <widget class="QSpinBox" name="Green_S_max_spinBox"/>
+               </item>
+               <item row="1" column="1">
+                <widget class="QSlider" name="Green_H_min_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="2">
+                <widget class="QSpinBox" name="Green_V_min_spinBox"/>
+               </item>
+               <item row="4" column="2">
+                <widget class="QSpinBox" name="Green_S_min_spinBox"/>
+               </item>
+               <item row="9" column="1">
+                <widget class="QSlider" name="Green_V_min_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_85">
+                 <property name="text">
+                  <string>S-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="4">
+                <widget class="QSlider" name="Green_V_max_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="4">
+                <widget class="QSlider" name="Green_S_max_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="0">
+                <widget class="QLabel" name="label_86">
+                 <property name="text">
+                  <string>V-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="5">
+                <widget class="QSpinBox" name="Green_V_max_spinBox"/>
+               </item>
+               <item row="1" column="4">
+                <widget class="QSlider" name="Green_H_max_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QSpinBox" name="Green_H_min_spinBox"/>
+               </item>
+               <item row="0" column="0" colspan="3">
+                <widget class="QLabel" name="label_87">
+                 <property name="text">
+                  <string>绿色</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QSlider" name="Green_S_min_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="3">
+                <widget class="QLabel" name="label_88">
+                 <property name="text">
+                  <string>S-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="5">
+                <widget class="QSpinBox" name="Green_H_max_spinBox"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="widget_blue_slider_spinBox" native="true">
+              <layout class="QGridLayout" name="gridLayout_16">
+               <item row="1" column="3">
+                <widget class="QLabel" name="label_89">
+                 <property name="text">
+                  <string>H-max</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_90">
+                 <property name="text">
+                  <string>H-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="3">
+                <widget class="QLabel" name="label_91">
+                 <property name="text">
+                  <string>V-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="5">
+                <widget class="QSpinBox" name="Blue_S_max_spinBox"/>
+               </item>
+               <item row="1" column="1">
+                <widget class="QSlider" name="Blue_H_min_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="2">
+                <widget class="QSpinBox" name="Blue_V_min_spinBox"/>
+               </item>
+               <item row="4" column="2">
+                <widget class="QSpinBox" name="Blue_S_min_spinBox"/>
+               </item>
+               <item row="9" column="1">
+                <widget class="QSlider" name="Blue_V_min_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_92">
+                 <property name="text">
+                  <string>S-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="4">
+                <widget class="QSlider" name="Blue_V_max_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="4">
+                <widget class="QSlider" name="Blue_S_max_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="0">
+                <widget class="QLabel" name="label_93">
+                 <property name="text">
+                  <string>V-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="5">
+                <widget class="QSpinBox" name="Blue_V_max_spinBox"/>
+               </item>
+               <item row="1" column="4">
+                <widget class="QSlider" name="Blue_H_max_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QSpinBox" name="Blue_H_min_spinBox"/>
+               </item>
+               <item row="0" column="0" colspan="3">
+                <widget class="QLabel" name="label_94">
+                 <property name="text">
+                  <string>蓝色</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QSlider" name="Blue_S_min_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="3">
+                <widget class="QLabel" name="label_95">
+                 <property name="text">
+                  <string>S-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="5">
+                <widget class="QSpinBox" name="Blue_H_max_spinBox"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="widget_yellow_slider_spinBox" native="true">
+              <layout class="QGridLayout" name="gridLayout_17">
+               <item row="1" column="3">
+                <widget class="QLabel" name="label_96">
+                 <property name="text">
+                  <string>H-max</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_97">
+                 <property name="text">
+                  <string>H-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="3">
+                <widget class="QLabel" name="label_98">
+                 <property name="text">
+                  <string>V-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="5">
+                <widget class="QSpinBox" name="Yellow_S_max_spinBox"/>
+               </item>
+               <item row="1" column="1">
+                <widget class="QSlider" name="Yellow_H_min_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="2">
+                <widget class="QSpinBox" name="Yellow_V_min_spinBox"/>
+               </item>
+               <item row="4" column="2">
+                <widget class="QSpinBox" name="Yellow_S_min_spinBox"/>
+               </item>
+               <item row="9" column="1">
+                <widget class="QSlider" name="Yellow_V_min_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_99">
+                 <property name="text">
+                  <string>S-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="4">
+                <widget class="QSlider" name="Yellow_V_max_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="4">
+                <widget class="QSlider" name="Yellow_S_max_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="0">
+                <widget class="QLabel" name="label_100">
+                 <property name="text">
+                  <string>V-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="5">
+                <widget class="QSpinBox" name="Yellow_V_max_spinBox"/>
+               </item>
+               <item row="1" column="4">
+                <widget class="QSlider" name="Yellow_H_max_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QSpinBox" name="Yellow_H_min_spinBox"/>
+               </item>
+               <item row="0" column="0" colspan="3">
+                <widget class="QLabel" name="label_101">
+                 <property name="text">
+                  <string>黄色</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QSlider" name="Yellow_S_min_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="3">
+                <widget class="QLabel" name="label_102">
+                 <property name="text">
+                  <string>S-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="5">
+                <widget class="QSpinBox" name="Yellow_H_max_spinBox"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="widget_orange_slider_spinBox" native="true">
+              <layout class="QGridLayout" name="gridLayout_18">
+               <item row="1" column="3">
+                <widget class="QLabel" name="label_103">
+                 <property name="text">
+                  <string>H-max</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_104">
+                 <property name="text">
+                  <string>H-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="3">
+                <widget class="QLabel" name="label_105">
+                 <property name="text">
+                  <string>V-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="5">
+                <widget class="QSpinBox" name="Orange_S_max_spinBox"/>
+               </item>
+               <item row="1" column="1">
+                <widget class="QSlider" name="Orange_H_min_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="2">
+                <widget class="QSpinBox" name="Orange_V_min_spinBox"/>
+               </item>
+               <item row="4" column="2">
+                <widget class="QSpinBox" name="Orange_S_min_spinBox"/>
+               </item>
+               <item row="9" column="1">
+                <widget class="QSlider" name="Orange_V_min_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_106">
+                 <property name="text">
+                  <string>S-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="4">
+                <widget class="QSlider" name="Orange_V_max_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="4">
+                <widget class="QSlider" name="Orange_S_max_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="0">
+                <widget class="QLabel" name="label_107">
+                 <property name="text">
+                  <string>V-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="5">
+                <widget class="QSpinBox" name="Orange_V_max_spinBox"/>
+               </item>
+               <item row="1" column="4">
+                <widget class="QSlider" name="Orange_H_max_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QSpinBox" name="Orange_H_min_spinBox"/>
+               </item>
+               <item row="0" column="0" colspan="3">
+                <widget class="QLabel" name="label_108">
+                 <property name="text">
+                  <string>橙色</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QSlider" name="Orange_S_min_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="3">
+                <widget class="QLabel" name="label_109">
+                 <property name="text">
+                  <string>S-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="5">
+                <widget class="QSpinBox" name="Orange_H_max_spinBox"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="widget_purple_slider_spinBox" native="true">
+              <layout class="QGridLayout" name="gridLayout_19">
+               <item row="1" column="3">
+                <widget class="QLabel" name="label_110">
+                 <property name="text">
+                  <string>H-max</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_111">
+                 <property name="text">
+                  <string>H-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="3">
+                <widget class="QLabel" name="label_112">
+                 <property name="text">
+                  <string>V-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="5">
+                <widget class="QSpinBox" name="Purple_S_max_spinBox"/>
+               </item>
+               <item row="1" column="1">
+                <widget class="QSlider" name="Purple_H_min_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="2">
+                <widget class="QSpinBox" name="Purple_V_min_spinBox"/>
+               </item>
+               <item row="4" column="2">
+                <widget class="QSpinBox" name="Purple_S_min_spinBox"/>
+               </item>
+               <item row="9" column="1">
+                <widget class="QSlider" name="Purple_V_min_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_113">
+                 <property name="text">
+                  <string>S-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="4">
+                <widget class="QSlider" name="Purple_V_max_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="4">
+                <widget class="QSlider" name="Purple_S_max_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="0">
+                <widget class="QLabel" name="label_114">
+                 <property name="text">
+                  <string>V-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="5">
+                <widget class="QSpinBox" name="Purple_V_max_spinBox"/>
+               </item>
+               <item row="1" column="4">
+                <widget class="QSlider" name="Purple_H_max_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QSpinBox" name="Purple_H_min_spinBox"/>
+               </item>
+               <item row="0" column="0" colspan="3">
+                <widget class="QLabel" name="label_115">
+                 <property name="text">
+                  <string>紫色</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QSlider" name="Purple_S_min_Slider">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="3">
+                <widget class="QLabel" name="label_116">
+                 <property name="text">
+                  <string>S-min</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="5">
+                <widget class="QSpinBox" name="Purple_H_max_spinBox"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_parameters" native="true">
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QPushButton" name="Btn_loading_parameters">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>加载参数</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="Btn_save_parameters">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>保存参数</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="Btn_reset_parameters">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>重置参数</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
