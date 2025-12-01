@@ -1,0 +1,12 @@
+debug/Config.o
+debug/algorithm.o
+debug/camera.o
+debug/colorprocess.o
+debug/main.o
+debug/mylabel.o
+debug/widget.o
+debug/moc_algorithm.o
+debug/moc_camera.o
+debug/moc_colorprocess.o
+debug/moc_mylabel.o
+debug/moc_widget.o

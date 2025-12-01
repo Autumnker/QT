@@ -1,0 +1,128 @@
+{
+    "contours": {
+        "BR": [
+            [
+                37,
+                0
+            ],
+            [
+                126,
+                163
+            ],
+            [
+                0,
+                150
+            ],
+            [
+                300,
+                150
+            ],
+            [
+                158,
+                104
+            ],
+            [
+                259,
+                300
+            ]
+        ],
+        "D": [
+            [
+                150,
+                0
+            ],
+            [
+                0,
+                150
+            ],
+            [
+                300,
+                150
+            ],
+            [
+                155,
+                138
+            ]
+        ],
+        "LF": [
+            [
+                264,
+                173
+            ],
+            [
+                259,
+                0
+            ],
+            [
+                0,
+                150
+            ],
+            [
+                300,
+                150
+            ],
+            [
+                243,
+                141
+            ],
+            [
+                259,
+                300
+            ]
+        ],
+        "U": [
+            [
+                155,
+                127
+            ],
+            [
+                0,
+                150
+            ],
+            [
+                300,
+                150
+            ],
+            [
+                150,
+                300
+            ]
+        ]
+    },
+    "h_LowerSpinBox_blue": 255,
+    "h_LowerSpinBox_green": 255,
+    "h_LowerSpinBox_orange": 0,
+    "h_LowerSpinBox_red": 0,
+    "h_LowerSpinBox_white": 255,
+    "h_LowerSpinBox_yellow": 255,
+    "h_UpperSpinBox_blue": 0,
+    "h_UpperSpinBox_green": 0,
+    "h_UpperSpinBox_orange": 255,
+    "h_UpperSpinBox_red": 255,
+    "h_UpperSpinBox_white": 0,
+    "h_UpperSpinBox_yellow": 0,
+    "s_LowerSpinBox_blue": 255,
+    "s_LowerSpinBox_green": 255,
+    "s_LowerSpinBox_orange": 0,
+    "s_LowerSpinBox_red": 0,
+    "s_LowerSpinBox_white": 255,
+    "s_LowerSpinBox_yellow": 255,
+    "s_UpperSpinBox_blue": 0,
+    "s_UpperSpinBox_green": 0,
+    "s_UpperSpinBox_orange": 255,
+    "s_UpperSpinBox_red": 255,
+    "s_UpperSpinBox_white": 0,
+    "s_UpperSpinBox_yellow": 0,
+    "v_LowerSpinBox_blue": 255,
+    "v_LowerSpinBox_green": 255,
+    "v_LowerSpinBox_orange": 213,
+    "v_LowerSpinBox_red": 0,
+    "v_LowerSpinBox_white": 255,
+    "v_LowerSpinBox_yellow": 255,
+    "v_UpperSpinBox_blue": 0,
+    "v_UpperSpinBox_green": 0,
+    "v_UpperSpinBox_orange": 255,
+    "v_UpperSpinBox_red": 255,
+    "v_UpperSpinBox_white": 0,
+    "v_UpperSpinBox_yellow": 0
+}

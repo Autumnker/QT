@@ -1,0 +1,12 @@
+release/Config.o
+release/algorithm.o
+release/camera.o
+release/colorprocess.o
+release/main.o
+release/mylabel.o
+release/widget.o
+release/moc_algorithm.o
+release/moc_camera.o
+release/moc_colorprocess.o
+release/moc_mylabel.o
+release/moc_widget.o
